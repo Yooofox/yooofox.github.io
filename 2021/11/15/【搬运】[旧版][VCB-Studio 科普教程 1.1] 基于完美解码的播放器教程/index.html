@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>【搬运】[旧版][VCB-Studio 科普教程 1.1] 基于完美解码的播放器教程 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[旧版][VCB-Studio 科普教程 1.1] 基于完美解码的播放器教程 本教程内容已较为过时。建议另行参考 MPC-HC 或 PotPlayer 播放器配置教程。 本教程旨在以完美解码为载体（已经略为老旧），教大家如何合理的配置播放环境。所述内容相对较为基础，如果已经对播放器配置比较在行的，请直接右上角。 为了避免混乱，和下载报错，给出本教程中使用的完美者解码，以及配套文件下载地址：http">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【搬运】[旧版][VCB-Studio 科普教程 1.1] 基于完美解码的播放器教程">
+<meta property="og:url" content="http://example.com/2021/11/15/%E3%80%90%E6%90%AC%E8%BF%90%E3%80%91[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[旧版][VCB-Studio 科普教程 1.1] 基于完美解码的播放器教程 本教程内容已较为过时。建议另行参考 MPC-HC 或 PotPlayer 播放器配置教程。 本教程旨在以完美解码为载体（已经略为老旧），教大家如何合理的配置播放环境。所述内容相对较为基础，如果已经对播放器配置比较在行的，请直接右上角。 为了避免混乱，和下载报错，给出本教程中使用的完美者解码，以及配套文件下载地址：http">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/0.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/3.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/4.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/5.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/6.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/7.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/8.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/9.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/10.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/11.jpg">
+<meta property="article:published_time" content="2021-11-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-11-16T13:50:39.901Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="搬运 教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/0.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-【搬运】[旧版][VCB-Studio 科普教程 1.1] 基于完美解码的播放器教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/11/15/%E3%80%90%E6%90%AC%E8%BF%90%E3%80%91%5B%E6%97%A7%E7%89%88%5D%5BVCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1%5D%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2021-11-14T16:00:00.000Z" itemprop="datePublished">2021-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【搬运】[旧版][VCB-Studio 科普教程 1.1] 基于完美解码的播放器教程
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="旧版-VCB-Studio-科普教程-1-1-基于完美解码的播放器教程"><a href="#旧版-VCB-Studio-科普教程-1-1-基于完美解码的播放器教程" class="headerlink" title="[旧版][VCB-Studio 科普教程 1.1] 基于完美解码的播放器教程"></a><a target="_blank" rel="noopener" href="https://vcb-s.com/archives/534">[旧版][VCB-Studio 科普教程 1.1] 基于完美解码的播放器教程</a></h1><p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/0.jpg"></p>
+<p>本教程内容已较为过时。建议另行参考 MPC-HC 或 PotPlayer 播放器配置教程。</p>
+<p>本教程旨在以完美解码为载体（已经略为老旧），教大家如何合理的配置播放环境。所述内容相对较为基础，如果已经对播放器配置比较在行的，请直接右上角。</p>
+<p><strong>为了避免混乱，和下载报错，给出本教程中使用的完美者解码，以及配套文件下载地址：<a target="_blank" rel="noopener" href="http://pan.baidu.com/s/1pLGlcj5">http://pan.baidu.com/s/1pLGlcj5</a></strong></p>
+<p>本教程按照如下模块组织：</p>
+<ol start="0">
+<li>Frequently Asked Questions</li>
+<li>安装前的准备</li>
+<li>安装完美解码</li>
+<li>配置完美解码</li>
+<li>针对potplayer的单独设置，和potplayer如何开启外挂音轨（如果你用potplayer播放HEVC，千万不要跳过这段）</li>
+<li>针对mpc-hc的单独设置</li>
+<li>用LAV Splitter和xySubFilter切换多音轨和字幕</li>
+</ol>
+<h2 id="0、F-A-Q"><a href="#0、F-A-Q" class="headerlink" title="0、F.A.Q"></a>0、F.A.Q</h2><p>Q: 我能使用终极解码/win7codecs等类似软件么？<br>A: 原则上可以，但是你得自己摸索相关设置。如果不知道怎么设置，建议用完美解码</p>
+<p>Q: 我之前安装了potplayer/qq影音/暴风影音，能保留么？<br>A: 原则上不能，如果万不得已一定需要保留，不要在安装完美解码之后再去安装它们</p>
+<p>Q: 我是64bit的机器，有64bit的播放环境设置教程么？<br>A: 播放软件用64bit是跟自己过不去，真的。</p>
+<p>Q: 能写一篇svp教程么？<br>A: 我也想写，问题是谁来赞助我一本能流畅跑svp的笔记本。。。</p>
+<p>Q: 能写终极解码/win7codecs等教程么？<br>A: 没有这方面的时间和精力一一去写。。。</p>
+<p>Q: 为啥如此钟爱完美解码？<br>A: 没为啥，只是用久了成习惯罢了</p>
+<p>Q: 我机器不好跑不动madVR怎么办？<br>A: 照这篇调低点:<a target="_blank" rel="noopener" href="https://vcb-s.com/archives/1216">https://vcb-s.com/archives/1216</a></p>
+<p>Q: 为什么不教授我们如何开启硬解？<br>A: 硬解的必要性体现在10年前的CPU很难解码H.264。你现在活在2015年，而不是2005年</p>
+<p>Q: 我是nvidia显卡的笔记本，无法调用独显来跑播放器，怎么办？<br>A: N卡强制将主流播放器设置为集显运行。这种情况下可以用NV Inspector进行解锁（上文网盘里面有）：<a target="_blank" rel="noopener" href="http://tieba.baidu.com/p/2642439635?see_lz=1">http://tieba.baidu.com/p/2642439635?see_lz=1</a></p>
+<h2 id="1、安装前的准备"><a href="#1、安装前的准备" class="headerlink" title="1、安装前的准备"></a>1、安装前的准备</h2><p>在控制面板里面，卸载旧版本完美解码，以及其他类似potplayer/qq影音/暴风影音等视频播放器，必要的话重启一下pc</p>
+<p>NV桌面显卡用户，请在NV控制面板里面把黑位调整到0-255（不同版本的控制面板这地方不同，总之找找颜色相关选项）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/1.jpg"></p>
+<p>AMD桌面+笔记本用户，请在CCC控制面板里面完全关闭一切视频加成，从基础颜色设置到演示模式，一路红灯：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/2.jpg"></p>
+<h2 id="2、安装完美解码"><a href="#2、安装完美解码" class="headerlink" title="2、安装完美解码"></a>2、安装完美解码</h2><p>下载之前网盘里的PureCodec2014.12.25.exe，并安装它。安装目录不要有中文，否则madVR无法正确启动。基本安装的时候，组件能勾选就勾选。记住你安装到了哪里；</p>
+<h3 id="注意：需要压片的组员，或者SVP的用户，千万记得取消勾选avisynth："><a href="#注意：需要压片的组员，或者SVP的用户，千万记得取消勾选avisynth：" class="headerlink" title="注意：需要压片的组员，或者SVP的用户，千万记得取消勾选avisynth："></a><strong>注意：需要压片的组员，或者SVP的用户，千万记得取消勾选avisynth：</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/3.jpg"></p>
+<p>装完了，完美解码会弹出个文件关联工具，给你选择哪些文件需要用完美解码打开，并且什么图标。这个一般人选择推荐设置就可以了。</p>
+<p>安装好了之后，下载LAVFilters.zip，解压覆盖到完美解压安装目录下 LAVFilters文件夹里面（自带的不但不够，还在处理HEVC文件上有点未知问题，所以我单独准备了一个版本）：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/4.jpg"></p>
+<p>安装好后，下载MediaInfo_i386.dll并丢到PureCodec目录下。这是为了解决一些机器上使用mediainfo.exe报错的问题。</p>
+<h2 id="3、配置完美解码"><a href="#3、配置完美解码" class="headerlink" title="3、配置完美解码"></a>3、配置完美解码</h2><p>装完后，在桌面或者开始菜单里，你都应该能找到完美解码的设置中心。按照下图配置：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/5.jpg"></p>
+<p>好了之后点击应用，然后 点击 分离器 – MKV – LAV 右侧的 … 按钮，红框中的选项不要开启（这是防止多音轨的时候，你听到的不是主音轨）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/6.jpg"></p>
+<p>点击确定，回到设置中心。上面标签，切换到播放器。播放器标签卡中，所有勾一个不要勾选</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/7.jpg"></p>
+<p>好了之后就可以点击确定退出了。</p>
+<p>用potplayer播放的时候，按tab键调出信息，出现下图所示，解码器为lav，渲染器为madshi Video Render，说明开启成功。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/8.jpg"></p>
+<p>右下角此时应该可以看到madVR的图标。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/9.jpg"></p>
+<p>右键，选择edit madVR settings。</p>
+<p>以下设置可以减少全屏播放下画面撕裂，但是特别容易引驱动之类的bug。如果你全屏幕播放有问题，比如严重卡顿，屏幕闪烁，下面的勾全部取消，否则开启</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/10.jpg"></p>
+<h2 id="4、针对potplayer的单独设置，和potplayer如何开启外挂音轨"><a href="#4、针对potplayer的单独设置，和potplayer如何开启外挂音轨" class="headerlink" title="4、针对potplayer的单独设置，和potplayer如何开启外挂音轨"></a>4、针对potplayer的单独设置，和potplayer如何开启外挂音轨</h2><p>本段是针对potplayer用户的单独设置：</p>
+<p>在播放视频的过程中，右键视频画面，音频-语音处理，看“规格化”之前是否有勾选。这个选项会自动调整声音大小，如果你觉得不想要可以关闭（一般推荐动漫关闭，电影打开）</p>
+<p>右键画面，选项，播放，勾选”在进度条上显示书签/章节标记”，然后在播放子标签中，时间跨度，不要勾选“如存在关键帧则以关键帧为移动单位”。这个是为了让你能看到章节分段，和精确地拖动进度条。</p>
+<p>回到播放设置，勾选“自动加载外部音轨”，这样你就可以在右键-音频-音频选择里面，切换到外挂音轨了：</p>
+<p>滤镜-视频解码器，然后将H265和HEVC设置为“使用系统默认解码器”。这是为了避免potplayer自带的ffmpeg解码Main 10 Profile的HEVC输出精度降低。</p>
+<h2 id="5、针对mpc-hc的单独设置"><a href="#5、针对mpc-hc的单独设置" class="headerlink" title="5、针对mpc-hc的单独设置"></a>5、针对mpc-hc的单独设置</h2><p>在播放过程中，右键画面，选项，调节，不要勾选“快速搜索(以关键帧)”，然后勾选“在进度栏显示章节标记”</p>
+<h2 id="6、用LAV-Splitter和xySubFilter切换多音轨和字幕"><a href="#6、用LAV-Splitter和xySubFilter切换多音轨和字幕" class="headerlink" title="6、用LAV Splitter和xySubFilter切换多音轨和字幕"></a>6、用LAV Splitter和xySubFilter切换多音轨和字幕</h2><p>大家经常可以见到带了多个音轨和字幕的（有时候还放在mka里面），本段讲述如何使用LAV和DirectVobSub切换它们。</p>
+<p>在播放的时候，你可以见到右下角出现LAV（白色）和DirectVobSub（绿色）的图标：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@5.0/course/[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/11.jpg"></p>
+<p>如果是有mka外挂，LAV分离器会启动两个，正片一个外挂一个。</p>
+<p>切换的时候，两个步骤：</p>
+<p>1、先从LAV分离器里面切换。如果你想要某个音轨或者字幕，你就在LAV分离器里面把它选择为输出轨道。如果是在mka里面，你就找到mka对应的LAV分离器图标，右键，找到对应的轨道（找不到是哪一个？那只好一个个试了）</p>
+<p>2、如果播放还没切换（通常是因为mka里面的音轨和字幕不会被默认输出），那就右键DirectVobSub的图标进行切换。DirectVobSub右键后的列表很混乱（第一次用，或者轨道多的，可能会头很晕），所以你需要根据语言等选项选择和尝试，勾选哪一条轨道的时候是你想要的。</p>
+<p>原文作者：<a target="_blank" rel="noopener" href="https://vcb-s.com/archives/author/littlepox">LittlePox</a> VCB-Studio 前队长/技术组组长</p>
+<p>版权属于: <a target="_blank" rel="noopener" href="https://vcb-s.com/">VCB-Studio</a></p>
+<p>原文地址: <a target="_blank" rel="noopener" href="https://vcb-s.com/archives/534">https://vcb-s.com/archives/534</a></p>
+<p>转载时必须以链接形式注明原始出处及本声明。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/11/15/%E3%80%90%E6%90%AC%E8%BF%90%E3%80%91[%E6%97%A7%E7%89%88][VCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1]%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/" data-id="ckw2ccvs500050wuohlhr776s" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%90%AC%E8%BF%90-%E6%95%99%E7%A8%8B/" rel="tag">搬运 教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/11/16/npm%E4%BF%AE%E6%94%B9%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%BA%90/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          npm修改国内镜像源
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/08/29/%E5%85%B3%E4%BA%8E%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8B%8D%E6%91%84%E7%9A%84%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">关于第一次拍摄的回忆与总结</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MIUI/" rel="tag">MIUI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OHHHHH/" rel="tag">OHHHHH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E5%BF%86%E6%80%BB%E7%BB%93/" rel="tag">回忆总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%90%AC%E8%BF%90-%E6%95%99%E7%A8%8B/" rel="tag">搬运 教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/MIUI/" style="font-size: 10px;">MIUI</a> <a href="/tags/OHHHHH/" style="font-size: 10px;">OHHHHH</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E6%80%BB%E7%BB%93/" style="font-size: 10px;">回忆总结</a> <a href="/tags/%E6%90%AC%E8%BF%90-%E6%95%99%E7%A8%8B/" style="font-size: 20px;">搬运 教程</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/11/16/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/16/npm%E4%BF%AE%E6%94%B9%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%BA%90/">npm修改国内镜像源</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/15/%E3%80%90%E6%90%AC%E8%BF%90%E3%80%91%5B%E6%97%A7%E7%89%88%5D%5BVCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1%5D%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/">【搬运】[旧版][VCB-Studio 科普教程 1.1] 基于完美解码的播放器教程</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/29/%E5%85%B3%E4%BA%8E%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8B%8D%E6%91%84%E7%9A%84%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%BB%E7%BB%93/">关于第一次拍摄的回忆与总结</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/29/%E9%9D%9EV-AB%E7%9A%84%E5%B8%B8%E8%A7%84%E6%9C%BA%E5%9E%8B%E5%AE%98%E6%96%B9ROM%E8%B6%85%E8%BF%874G%E5%A4%A7%E5%B0%8F%E6%8B%86%E5%8C%85%E6%95%99%E7%A8%8B/">非V-AB的常规机型官方ROM超过4G大小拆包教程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

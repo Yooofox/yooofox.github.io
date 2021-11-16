@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>非V-AB的常规机型官方ROM超过4G大小拆包教程 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="此处以小米10自尊版的内测rom miui_CAS_21.9.8_404fd1b545_11.0.zip 为例，其他机型照葫芦画瓢： 一、解压官方ROM，并创建两个空文件夹1、2 二、提取第一部分：1.将 dynamic_partitions_op_list 和 odm、product、system、system_ext、vendor 开头的全部文件移动到1文件夹 2.将META-INF文件夹复制">
+<meta property="og:type" content="article">
+<meta property="og:title" content="非V-AB的常规机型官方ROM超过4G大小拆包教程">
+<meta property="og:url" content="http://example.com/2021/08/29/%E9%9D%9EV-AB%E7%9A%84%E5%B8%B8%E8%A7%84%E6%9C%BA%E5%9E%8B%E5%AE%98%E6%96%B9ROM%E8%B6%85%E8%BF%874G%E5%A4%A7%E5%B0%8F%E6%8B%86%E5%8C%85%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="此处以小米10自尊版的内测rom miui_CAS_21.9.8_404fd1b545_11.0.zip 为例，其他机型照葫芦画瓢： 一、解压官方ROM，并创建两个空文件夹1、2 二、提取第一部分：1.将 dynamic_partitions_op_list 和 odm、product、system、system_ext、vendor 开头的全部文件移动到1文件夹 2.将META-INF文件夹复制">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/3.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/4.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/5.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/6.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/7.png">
+<meta property="article:published_time" content="2021-08-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-11-16T05:43:31.034Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-非V-AB的常规机型官方ROM超过4G大小拆包教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/08/29/%E9%9D%9EV-AB%E7%9A%84%E5%B8%B8%E8%A7%84%E6%9C%BA%E5%9E%8B%E5%AE%98%E6%96%B9ROM%E8%B6%85%E8%BF%874G%E5%A4%A7%E5%B0%8F%E6%8B%86%E5%8C%85%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2021-08-28T16:00:00.000Z" itemprop="datePublished">2021-08-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      非V-AB的常规机型官方ROM超过4G大小拆包教程
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>此处以小米10自尊版的内测rom miui_CAS_21.9.8_404fd1b545_11.0.zip 为例，其他机型照葫芦画瓢：</p>
+<h1 id="一、解压官方ROM，并创建两个空文件夹1、2"><a href="#一、解压官方ROM，并创建两个空文件夹1、2" class="headerlink" title="一、解压官方ROM，并创建两个空文件夹1、2"></a>一、解压官方ROM，并创建两个空文件夹1、2</h1><p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/1.png"></p>
+<h1 id="二、提取第一部分："><a href="#二、提取第一部分：" class="headerlink" title="二、提取第一部分："></a>二、提取第一部分：</h1><p>1.将 dynamic_partitions_op_list 和 odm、product、system、system_ext、vendor <strong>开头</strong>的全部文件<strong>移动</strong>到1文件夹</p>
+<p>2.将META-INF文件夹<strong>复制</strong>到1文件夹，得到图示结构</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/2.png"></p>
+<p>3.进入1文件夹里 META-INF\com\google\android 文件夹，用Notepad++打开updater-script文件，只保留图示部分刷机脚本，其他行全部删除，再保存</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/3.png" alt="仅保留图示部分"></p>
+<h1 id="三、提取第二部分："><a href="#三、提取第二部分：" class="headerlink" title="三、提取第二部分："></a>三、提取第二部分：</h1><p>1.将刚才剩下的其他文件和文件夹<strong>全部</strong>移到2文件夹，得到图示结构</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/4.png"></p>
+<p>2.进入2文件夹里 META-INF\com\google\android 文件夹，用Notepad++打开updater-script文件</p>
+<p>3.将1文件夹里之前保留的刷机脚本部分删掉，只保留图示部分刷机脚本，其他行全部删除，再保存</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/5.png" alt="仅保留图示部分"></p>
+<h1 id="四、重新分别进入到1、2文件夹，压缩回zip"><a href="#四、重新分别进入到1、2文件夹，压缩回zip" class="headerlink" title="四、重新分别进入到1、2文件夹，压缩回zip"></a>四、重新<strong>分别进入</strong>到1、2文件夹，压缩回zip</h1><p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/6.png" alt="这样子是对的"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yooofox/cdn@4.0/course/3/7.png" alt="这样子是错的！"></p>
+<h1 id="五、到twrp分别刷入这两个包即可"><a href="#五、到twrp分别刷入这两个包即可" class="headerlink" title="五、到twrp分别刷入这两个包即可"></a>五、到twrp分别刷入这两个包即可</h1><h1 id="完"><a href="#完" class="headerlink" title="完"></a>完</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/08/29/%E9%9D%9EV-AB%E7%9A%84%E5%B8%B8%E8%A7%84%E6%9C%BA%E5%9E%8B%E5%AE%98%E6%96%B9ROM%E8%B6%85%E8%BF%874G%E5%A4%A7%E5%B0%8F%E6%8B%86%E5%8C%85%E6%95%99%E7%A8%8B/" data-id="ckw2ccvs700070wuof9mkej7d" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/08/29/%E5%85%B3%E4%BA%8E%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8B%8D%E6%91%84%E7%9A%84%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          关于第一次拍摄的回忆与总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/08/25/%E7%BB%88%E4%BA%8E%E6%8A%8A%E8%BF%99%E7%8E%A9%E6%84%8F%E5%84%BF%E6%90%9E%E5%87%BA%E6%9D%A5%E4%BA%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">终于把这玩意儿搞出来了</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MIUI/" rel="tag">MIUI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OHHHHH/" rel="tag">OHHHHH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E5%BF%86%E6%80%BB%E7%BB%93/" rel="tag">回忆总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%90%AC%E8%BF%90-%E6%95%99%E7%A8%8B/" rel="tag">搬运 教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/MIUI/" style="font-size: 10px;">MIUI</a> <a href="/tags/OHHHHH/" style="font-size: 10px;">OHHHHH</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E6%80%BB%E7%BB%93/" style="font-size: 10px;">回忆总结</a> <a href="/tags/%E6%90%AC%E8%BF%90-%E6%95%99%E7%A8%8B/" style="font-size: 20px;">搬运 教程</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/11/16/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/16/npm%E4%BF%AE%E6%94%B9%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%BA%90/">npm修改国内镜像源</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/15/%E3%80%90%E6%90%AC%E8%BF%90%E3%80%91%5B%E6%97%A7%E7%89%88%5D%5BVCB-Studio%20%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B%201.1%5D%20%E5%9F%BA%E4%BA%8E%E5%AE%8C%E7%BE%8E%E8%A7%A3%E7%A0%81%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/">【搬运】[旧版][VCB-Studio 科普教程 1.1] 基于完美解码的播放器教程</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/29/%E5%85%B3%E4%BA%8E%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8B%8D%E6%91%84%E7%9A%84%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%BB%E7%BB%93/">关于第一次拍摄的回忆与总结</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/29/%E9%9D%9EV-AB%E7%9A%84%E5%B8%B8%E8%A7%84%E6%9C%BA%E5%9E%8B%E5%AE%98%E6%96%B9ROM%E8%B6%85%E8%BF%874G%E5%A4%A7%E5%B0%8F%E6%8B%86%E5%8C%85%E6%95%99%E7%A8%8B/">非V-AB的常规机型官方ROM超过4G大小拆包教程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
